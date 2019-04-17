@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.cg.xyzbankingapplication.dao.TransactionDao;
 import com.cg.xyzbankingapplication.model.Customer;
 import com.cg.xyzbankingapplication.model.Transaction;
 import com.cg.xyzbankingapplication.service.CustomerServiceImpl;
@@ -26,6 +27,8 @@ public class CustomerController {
 	private CustomerServiceImpl service;
 	@Autowired
 	private TransactionService service1;
+	@Autowired
+	private TransactionDao service2;
 	
 //saving the the customer in the database 
 	
@@ -56,7 +59,7 @@ public class CustomerController {
 
 			ModelAndView modelAndView = new ModelAndView("showstatus");
 
-			modelAndView.addObject("AA", customer);
+			modelAndView.addObject("SHOW", customer);
 			return modelAndView;
 
 		} else {
@@ -73,10 +76,10 @@ public class CustomerController {
 	int balance=	customer.getBalance();
 		ModelAndView modelAndView = new ModelAndView("showbalance");
 
-		modelAndView.addObject("AA", balance);
+		modelAndView.addObject("SHOW", balance);
 		return modelAndView;
 	}
-//for printing the transaction done by a particular user
+//for printing the last 10 transaction done by a particular user
 	@GetMapping("/transaction")
 	public ModelAndView gettransaction() {
 
@@ -93,7 +96,7 @@ public class CustomerController {
 		String a = name;
 		String b = password;
 
-		if (a.equals("robert") && b.equals("wadra")) {
+		if (a.equals("sachin") && b.equals("yadav")) {
 			modelAndView = new ModelAndView("addcustomer");
 			return modelAndView;
 		} else {
@@ -131,7 +134,7 @@ public class CustomerController {
 
 		ModelAndView modelAndView = new ModelAndView("updatedbalance");
 
-		modelAndView.addObject("AA", customer);
+		modelAndView.addObject("UPDATE", customer);
 		return modelAndView;
 	}
 // withdraw money
@@ -155,7 +158,7 @@ public class CustomerController {
 
 			ModelAndView modelAndView = new ModelAndView("updatedbalance");
 
-			modelAndView.addObject("AA", customer);
+			modelAndView.addObject("UPDATE", customer);
 			return modelAndView;
 		}
 	}
@@ -192,7 +195,7 @@ public class CustomerController {
 
 			ModelAndView modelAndView = new ModelAndView("transferdetail");
 
-			modelAndView.addObject("TRANSFER1", receiver);
+			modelAndView.addObject("TRANSFER1	", receiver);
 			modelAndView.addObject("TRANSFER", sender);
 			return modelAndView;
 		}

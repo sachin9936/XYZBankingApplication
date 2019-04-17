@@ -1,17 +1,36 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+      	<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Bank Service</title>
 <link rel="stylesheet" type="text/css" href="Anything.css">
 </head>
-<body>
-<form action="customer/manager" method="Post">
-		Manger UserName<input type="text" name="name" required autofocus /> <br>
-		Manager Password Password<input type="text" name="password"> 
-		<input type="submit" value="add customer">
-		</form>
+<body bgcolor="grey">
+
+		
+		
+<div   class="container login-container">
+            <div class="row">
+                <div class="col-md-6 login-form-1">
+                    <h3>Manager Login</h3>
+                    <form action="customer/manager" method="Post">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Username *" name="name"  />
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" placeholder="Your Password *" name="password" />
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" class="btnSubmit" value="Login" />
+                        </div>
+                      
+                    </form>
+                </div>
 </body>
 </html>

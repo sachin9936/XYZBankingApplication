@@ -4,10 +4,10 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Bank Service</title>
 <link rel="stylesheet" type="text/css" href="Anything.css">
 </head>
-<body>
+<body bgcolor="grey">
 <h1>Password change</h1>
 </body>
 </html>

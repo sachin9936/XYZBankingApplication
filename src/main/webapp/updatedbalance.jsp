@@ -4,10 +4,10 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Bank Service</title>
 <link rel="stylesheet" type="text/css" href="Anything.css">
 </head>
-<body>
+<body bgcolor="grey">
 <h3>Updated Balance</h3>
 	<table border="1">
 		<thead>
@@ -20,9 +20,9 @@
 		</thead>
 		<tbody>
 			<tr>
-				<td>${AA.id}</td>
-				<td>${AA.name}</td>
-				<td>${AA.balance}</td>
+				<td>${UPDATE.id}</td>
+				<td>${UPDATE.name}</td>
+				<td>${UPDATE.balance}</td>
 			</tr>
 		</tbody>
 	</table>
